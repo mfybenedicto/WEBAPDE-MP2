@@ -27,7 +27,9 @@ public class TagPhoto extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		//If narefresh ng user then send him back to that same jsp without changing the data
+		response.sendRedirect("/webapdemp2/PhotoViewer.jsp");
 	}
 
 	/**
@@ -35,6 +37,10 @@ public class TagPhoto extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		//	Write the shit here boy
+		// 	Redirect the user to the photo again with the tag applied dont use response.sendRedirect(); why? (See FAQs)
+		
 		doGet(request, response);
 	}
 

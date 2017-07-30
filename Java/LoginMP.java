@@ -1,11 +1,15 @@
 
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import model.User;
+import model.UserServices;
 
 /**
  * Servlet implementation class LoginMP
@@ -13,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/LoginMP")
 public class LoginMP extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	private static final String REMEMBER_ME = "1";
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -27,7 +31,7 @@ public class LoginMP extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.getRequestDispatcher("/LoginPage.jsp").forward(request, response);
 	}
 
 	/**
@@ -35,7 +39,31 @@ public class LoginMP extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//Get the user and pass and remember me
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String rememberMe = request.getParameter("rememberMe");
+		boolean isRememberMe = false;
+		if (REMEMBER_ME.equals(rememberMe)) {
+			isRememberMe = true;
+		}
+		//System.out.println("dummyLogin");
+		//check user services for login authentication
+		User user = UserServices.dummyLogin(username, password, isRememberMe);
+		
+		if (user != null) {
+			// save person to session
+			// you can also do getSession().setAttribute instead of getting
+			// HttpSession object first before setting attribute
+			request.getSession().setAttribute("user", user);
+
+			// redirect to secured page
+			response.sendRedirect("/webapdemp2/HomeServlet");
+			System.out.println("login dopost");
+		} else {
+			response.sendRedirect("/webapdemp2/LoginMP");
+			System.out.println("login dopost");
+		}
 	}
 
 }

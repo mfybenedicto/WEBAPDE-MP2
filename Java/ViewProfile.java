@@ -35,6 +35,12 @@ public class ViewProfile extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		//check if user == to the user profile
+		
+		// if yes allow him to edit and view private shit
+		
+		// if not allow him to view public shit only (Im talking about jsp doe)
 		doGet(request, response);
 	}
 

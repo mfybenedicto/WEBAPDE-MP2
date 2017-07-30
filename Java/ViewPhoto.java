@@ -35,6 +35,12 @@ public class ViewPhoto extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		//Get the parameter shit here request.blahblah
+		
+		//get the image
+		
+		//give image to jsp
 		doGet(request, response);
 	}
 

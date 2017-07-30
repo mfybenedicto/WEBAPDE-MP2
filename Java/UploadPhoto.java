@@ -35,6 +35,8 @@ public class UploadPhoto extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		//as of now pagclick niya just add a new photo sa jsp (check mp1)
 		doGet(request, response);
 	}
 

@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.User;
+import model.UserServices;
 /**
  * Servlet implementation class Register
  */
@@ -27,7 +29,7 @@ public class Register extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.getRequestDispatcher("/RegisterPage.jsp").forward(request, response);
 	}
 
 	/**
@@ -35,7 +37,23 @@ public class Register extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		
+		//Gawa user ng account
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		//Save sa static variable
+		UserServices.tempUsername = username;
+		UserServices.tempPassword = password;
+		
+		
+		User user = UserServices.dummyLogin(username, password, false);
+		
+		//Save mo sa current session
+		request.getSession().setAttribute("user", user);
+
+		//Punta mo sila sa home
+		response.sendRedirect("/webapdemp2/HomeServlet");
+		System.out.println("login dopost");
 	}
 
 }

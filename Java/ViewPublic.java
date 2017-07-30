@@ -27,7 +27,9 @@ public class ViewPublic extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		//send him back to public photos .jsp if nagrefresh lel
+		response.sendRedirect("/webapdemp2/PublicPhotos.jsp");
 	}
 
 	/**
