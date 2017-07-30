@@ -1,0 +1,23 @@
+What is UserServices?
+- A class that simply checks if the user can enter/proceed with the website (static siya soo you can call it anywhere.)
+
+When do I use doGet and doPost?
+- It depends. Reminder: doGet is usually called with response.sendRedirect(); and doPost is usually called with request.getRequestDispatcher...
+P.S: The method=post also calls the doPost when submitting or clicking something yata? clicking == href
+
+Why cookies? 
+- Kailangan eh :C
+
+What is the difference between adding shit to session and adding shit to the request?
+- hmm best example for this is this code block:
+	request.setAttribute();
+	response.sendRedirect();
+		vs.
+	request.getSession().setAttribute();
+	response.sendRedirect();
+
+First block of code wont be able to save the values inside the request while the second remains throughout the session.
+
+ 
+May tanong ka pa na wala dito?
+- pm mo ko bading :c
