@@ -1,13 +1,25 @@
-<body style="background-color:#adeda8;">
+<head>
+ 	<link href = "RegisterPage_style.css" rel="stylesheet"/>
+</head>
+
+<body>
+	<div id = "menuDiv">
+    </div>
 	<form action = "/WEBAPDE-MP2/RegisterServlet" method = "POST">
-		<div>
-			<input type = "text" name = "username" style = "margin-top:15px;"/>
+		<div id = "regDiv">
+			<label>Username: </label>
+			<input type = "text" name = "username"/>
 			<br>
-			<input type = "password" name = "password" style = "margin-top:15px;"/>
+			<label>Password: </label>
+			<input type = "password" name = "password"/>
 			<br>
-			<textarea name = "description" rows = "4" cols = "50" style = "margin-top:15px;"></textarea>
 			<br>
-			<input type = "submit" value = "Submit" style = "background-color:#449140; color:white; margin-top:15px;"/>
+			<label>Description:</label>
+			<br>
+			<textarea name = "description" rows = "4" cols = "50"></textarea>
+			<br>
+			<button>Back</button>
+			<input type = "submit" name = "submitForm" value = "Submit"/>
 		</div>
 	</form>
 </body>

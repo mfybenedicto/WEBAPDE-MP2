@@ -1,13 +1,21 @@
-<body style="background-color:#adeda8;">
-	<form action = "/WEBAPDE-MP2/MainServlet" method = "POST">
-		<div>
-			<input type = "text" name = "username" style = "margin-top:15px;">
+<head>
+ 	<link href = "LoginPage_style.css" rel="stylesheet"/>
+</head>
+
+<body>
+	<div id = "menuDiv">
+    </div>
+	<form action = "/WEBAPDE-MP2/RegisterServlet" method = "POST">
+		<div id = "regDiv">
+			<label>Username: </label>
+			<input type = "text" name = "username"/>
 			<br>
-			<input type = "password" name = "password" style = "margin-top:15px;">
+			<label>Password: </label>
+			<input type = "password" name = "password"/>
 			<br>
 			<input type = "checkbox" name = "rememberMe">Remember Me   
-			<input type = "submit" value = "Submit" style = "background-color:#449140; color:white;
-			margin-top:15px; margin-left:15px">
+			<button>Back</button>
+			<input type = "submit" name = "submitForm" value = "Submit"/>
 		</div>
 	</form>
 </body>
