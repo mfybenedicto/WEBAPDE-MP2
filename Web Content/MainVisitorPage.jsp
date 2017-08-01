@@ -4,13 +4,13 @@
 
 <body>
 	<div id = "menuDiv">
-		<div id = "rgDiv">
-			<button id = "lButton">Log in</button>
-			<button id = "rButton">Register</button>
-		</div>
+		<label id = "searchBox">Search: </label>
+		<input type = "search" name = "searchStr">
+		<button id = "lButton">Log in</button>
+		<button id = "rButton">Register</button>
 	</div>
 	
 	<div id = "lowerDiv">
-		<button id = "vButton">View More</button>
+		<button id = "vButton">View More Public Photos</button>
 	</div>
 </body>

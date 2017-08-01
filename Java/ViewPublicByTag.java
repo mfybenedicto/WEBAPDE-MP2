@@ -1,6 +1,7 @@
 
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -37,11 +38,11 @@ public class ViewPublicByTag extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		// Get the tag sent by the user using request.getParameter("tags");
+		String tags = request.getParameter("tags");
 		
 		// idk what to do but it has something to do with servlet communicating to the jsp
 		// use request.getRequestDispatcher("/*insert jsp name here*").forward(request,response);
-		
-		doGet(request, response);
+		request.getRequestDispatcher("/MainVisitorPage.jsp").forward(request, response);
 	}
 
 }

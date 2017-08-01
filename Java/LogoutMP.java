@@ -55,7 +55,7 @@ public class LogoutMP extends HttpServlet {
 		session.removeAttribute("user");
 		
 		//send them back to login page (this calls doGet btw)
-		response.sendRedirect("/webapdemp2/Login");
+		response.sendRedirect("/WEBAPDE-MP2/Login");
 	}
 
 }

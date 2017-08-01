@@ -5,7 +5,7 @@
 <body>
 	<div id = "menuDiv">
     </div>
-	<form action = "/WEBAPDE-MP2/RegisterServlet" method = "POST">
+	<form action = "/WEBAPDE-MP2/MainPage" method = "POST">
 		<div id = "regDiv">
 			<label>Username: </label>
 			<input type = "text" name = "username"/>

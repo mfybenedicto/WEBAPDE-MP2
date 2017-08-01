@@ -13,18 +13,18 @@ button{
 	color: white;
 }
 
+#searchBox{
+	margin-left: 40px;
+	color: white;
+}
+
 #lButton{
 	margin-top: 15px;
+	margin-left: 450px;
 }
 
 #rButton{
 	margin-top: 15px;
-}
-
-
-#rgDiv{
-	float: right;
-	padding-right: 10px;
 }
 
 #lowerDiv{

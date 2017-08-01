@@ -47,7 +47,7 @@ public class SearchByTag extends HttpServlet {
 		response.addCookie(cookies);
 		
 		//ez send to the next servlet (it calls the doPost func btw)
-		request.getRequestDispatcher("/webapdemp2/ViewPublicByTag").forward(request, response);
+		request.getRequestDispatcher("/WEBAPDE-MP2/ViewPublicByTag").forward(request, response);
 	}
 
 }

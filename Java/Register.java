@@ -52,7 +52,7 @@ public class Register extends HttpServlet {
 		request.getSession().setAttribute("user", user);
 
 		//Punta mo sila sa home
-		response.sendRedirect("/webapdemp2/HomeServlet");
+		response.sendRedirect("/WEBAPDE-MP2/HomeServlet");
 		System.out.println("login dopost");
 	}
 

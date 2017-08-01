@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.User;
+
 /**
  * Servlet implementation class ViewPhoto
  */
@@ -27,7 +29,7 @@ public class ViewPhoto extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.getRequestDispatcher("/PhotoViewer.jsp").forward(request, response);
 	}
 
 	/**
@@ -37,11 +39,19 @@ public class ViewPhoto extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		//Get the parameter shit here request.blahblah
+		String title = request.getParameter("title");
+		String description = request.getParameter("description");
+		String uploader = request.getParameter("uploader");
+		String tags = request.getParameter("tags");
 		
 		//get the image
+		String thumbURL = request.getParameter("thumbURL");
+		
 		
 		//give image to jsp
-		doGet(request, response);
+		
+		request.getRequestDispatcher("/PhotoViewer.jsp").forward(request, response);
+		
 	}
 
 }

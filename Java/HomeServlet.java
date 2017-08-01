@@ -38,7 +38,7 @@ public class HomeServlet extends HttpServlet {
 		request.setAttribute("username", user.getUsername());
 		// load the jsp file
 		
-		request.getRequestDispatcher("/webapdemp2/MainVisitorPage.jsp").forward(request, response);
+		request.getRequestDispatcher("/MainVisitorPage.jsp").forward(request, response);
 	}
 
 	/**

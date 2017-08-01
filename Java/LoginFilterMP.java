@@ -12,32 +12,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.User;
-import samples.Person;
 
 /**
  * Servlet Filter implementation class LoginFilterMP
  */
 // this means that lahat ng matamaan na servlet dadaan muna sa filter na to so basically it checks if the user is still logged in
-@WebFilter(urlPatterns = {"/HomeServlet", "/SearchByTag", "/SharePhoto", "/TagPhoto", "/UploadPhoto", "/ViewPhoto", "/ViewProfile", "ViewPublic"})
+@WebFilter(urlPatterns = {"/HomeServlet", "/SearchByTag", "/SharePhoto", "/TagPhoto", "/UploadPhoto", "/ViewPhoto", "/ViewProfile", "/ViewPublic"})
 public class LoginFilterMP implements Filter {
-
-    /**
-     * Default constructor. 
-     */
-    public LoginFilterMP() {
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
 	 * @see Filter#destroy()
 	 */
+    @Override
 	public void destroy() {
 		// TODO Auto-generated method stub
 	}
-
 	/**
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
+    @Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		// TODO Auto-generated method stub
 		// place your code here
@@ -49,7 +42,7 @@ public class LoginFilterMP implements Filter {
 				if (user == null) {
 					// person is null means the user is not logged in. 
 					// forward user to login page
-					httpResponse.sendRedirect("/webapdemp2/LoginMP");
+					httpResponse.sendRedirect("/WEBAPDE-MP2/LoginMP");
 				} else {
 					// if person is logged in then continue with the request
 					chain.doFilter(request, response);
@@ -59,6 +52,7 @@ public class LoginFilterMP implements Filter {
 	/**
 	 * @see Filter#init(FilterConfig)
 	 */
+	@Override
 	public void init(FilterConfig fConfig) throws ServletException {
 		// TODO Auto-generated method stub
 	}

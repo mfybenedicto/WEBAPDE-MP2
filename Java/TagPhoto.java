@@ -29,7 +29,7 @@ public class TagPhoto extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		//If narefresh ng user then send him back to that same jsp without changing the data
-		response.sendRedirect("/webapdemp2/PhotoViewer.jsp");
+		response.sendRedirect("/WEBAPDE-MP2/PhotoViewer.jsp");
 	}
 
 	/**

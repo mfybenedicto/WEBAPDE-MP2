@@ -31,7 +31,10 @@ public class LoginMP extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println("hello");
 		request.getRequestDispatcher("/LoginPage.jsp").forward(request, response);
+		
+		
 	}
 
 	/**
@@ -56,12 +59,14 @@ public class LoginMP extends HttpServlet {
 			// you can also do getSession().setAttribute instead of getting
 			// HttpSession object first before setting attribute
 			request.getSession().setAttribute("user", user);
-
+			request.getSession().setAttribute("username", user.getUsername());
+			//username = user.getUsername();
+			
 			// redirect to secured page
-			response.sendRedirect("/webapdemp2/HomeServlet");
+			response.sendRedirect("/WEBAPDE-MP2/HomeServlet");
 			System.out.println("login dopost");
 		} else {
-			response.sendRedirect("/webapdemp2/LoginMP");
+			response.sendRedirect("/WEBAPDE-MP2/LoginMP");
 			System.out.println("login dopost");
 		}
 	}
