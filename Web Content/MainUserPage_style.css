@@ -1,0 +1,28 @@
+#menuDiv{
+    z-index: 1;
+    background-color: #449140;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100%;
+}
+
+button{
+    background-color: #449140;
+	color: white;
+}
+
+#lButton{
+	margin-top: 15px;
+}
+
+#rgDiv{
+	float: right;
+	padding-right: 10px;
+}
+
+#lowerDiv{
+	margin-top: 80px;
+	padding-left: 380px;
+}
