@@ -1,0 +1,200 @@
+			
+			#box_UpperBar{
+				position: static;
+			}
+			
+			.UpperBar{
+				position:relative;
+				border:2px solid  lightgreen;
+				height:50px;
+				width:100%;
+				background:lightgreen;
+				color:lightgreen;
+			}
+			
+			.More_Photos{
+				position:relative;
+				width:20%;
+				top: 10%;
+			}
+			
+			
+			#Outline_More_Images{
+				position:fixed;
+				top:10%;	
+				left:24%;
+			}
+			
+			.Home,.Profile,.Search, .Login, .Logout{
+				position:absolute;
+				top:20%;
+			}
+			
+			.Shared_Images, .Public_Images{
+				position:absolute;
+			}
+			
+			.Home:hover, .Profile:hover, .Login:hover, .More_Photos:hover,  .Logout:hover { 
+   				 background-color:gray;
+   				 cursor:pointer;	 
+			}
+			
+			.Search:hover{
+				cursor:text;
+			}
+			
+			.Home , .Profile, .Login, .Logout{
+				padding:5px;
+				border:2px solid lightgreen;
+				width:70px;
+				background:lightgreen;
+				color:black;
+			}
+			
+			.Profile{
+				left: 7%;
+			}
+			
+			.Search{
+				left: 50%;
+				width: 500px;
+				padding: 5px;
+				border:2px solid lightgreen;
+			}
+			
+			.Login,.Logout{
+				left: 15%;	
+			}
+			
+			.Shared_Images{
+				right: 4%;
+			}
+			
+						
+			.Photos_Choice{
+				width: 17%;
+			}
+			
+			.Public_Photos{
+				left: 4%;
+				width: 100px;
+			}
+			
+			.UserProfile{
+				clear: both;
+				width: 100%;	
+			}
+	
+			.UserName{
+				margin-top:20px;
+			}
+		
+			.UserDescription{
+				margin-top:50px;	
+			}	
+			
+			table.Public_Table{
+				position:relative;
+				width: 50%;
+				display: inline-block;
+				float:left;
+			
+			}
+
+			table.Shared_Table{
+				
+				width: 50%;
+				display: inline-block;
+				
+			
+			}
+			
+			table.Shared_Table{
+				left:40%;
+			}
+			
+			table.Shared_Table td, table.Public_Table td{
+				width: 70px;
+				height: 70px;
+				
+			}
+			
+			#Photo_Table{
+				position: static;
+			}
+			
+			#Image_Label{
+				position: static;
+				height: 100 px;
+			}
+			
+			#Photo_Details_Label, #Photo{
+				position:static;
+				width: 100%;	
+			}
+			
+			table#Photo_Details_Label_Table, table#Photo_Table{
+				position:relative;
+				left: 10%;
+				width: 90%;
+			
+			}
+			
+			table#Photo_Table{
+				height:80%;
+			}
+			
+			#Photo_Table img, .Public_Table img, .Shared_Table img{
+				display:block; 
+				width:80%; 
+				height:auto;
+			}
+			
+			#Photo_Table td:nth-child(1){
+				width: 50%;
+			}
+			
+			#Photo_Table td:nth-child(2){
+				width: 50%;
+				vertical-align:top;
+				font-size: 25px;
+			}
+			
+			#Photo_Table_Details td:nth-child(1){
+				vertical-align:top;
+				width: 20%;
+			}
+			#Photo_Table_Details td:nth-child(2){
+				font-size: 15px;
+				vertical-align:top;
+				width: 80%;
+			}
+			
+			#Share_Option{
+				visibility: hidden;
+			}
+			
+			
+			#Upload_Images_Outline{
+				position:fixed;
+				width: 100%;
+				top:10%;	
+				right:15%;
+			}
+			
+			#Upload_Images{
+				position: fixed;
+				right: 76%
+			}
+	
+
+	
+
+
+
+			
+			
+
+			
+			
+			
